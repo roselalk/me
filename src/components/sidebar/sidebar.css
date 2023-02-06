@@ -1,0 +1,47 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+    padding-top: 100px;
+}
+
+
+/* PROFILE CARD */
+.prof {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.prof > * {
+    margin: 0;
+}
+.prof__img {
+    width: 230px;
+    border-radius: 50%;
+    padding-bottom: 5px;
+}
+
+.prof__name {
+    align-self: center;
+}
+
+.prof__subtitle {
+    color: #9C9C9C;
+    align-self: center;
+}
+
+/* MENU ITEMS */
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.menu-item__title {
+    margin: 0;
+}
+
