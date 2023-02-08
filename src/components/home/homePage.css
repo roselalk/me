@@ -1,0 +1,45 @@
+.home {
+  background-image: url("../../assets/seoul.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  color: white;
+}
+
+.home__name {
+  font-size: 100px;
+}
+
+.home__subtitle {
+  font-size: 35px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.home__text {
+  margin-top: 15%;
+}
+
+@keyframes fade-inout {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fade-subtitle {
+  animation: fade-inout 3s infinite alternate;
+  transition: 1s ease-in-out;
+}

@@ -28,7 +28,7 @@
 }
 
 .prof__subtitle {
-    color: #9C9C9C;
+    color: var(--lightgreyblue);
     align-self: center;
 }
 
