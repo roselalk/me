@@ -4,21 +4,24 @@ import { PieChart } from "react-minimal-pie-chart";
 import "./statistic.css";
 
 function Statistic(props) {
-
-
   return (
     <div className="stat">
-      <h2 className="stat__title">Angular</h2>
-      <PieChart
+      <div >
+        <h2 className="stat__title">{props.title}</h2>
+        {/* <PieChart
+        // animation
+        // animationDuration={500}
+        // animationEasing="ease-out"
         data={[
-          { title: "One", value: 20, color: "white" },
-          { title: "2", value: 20, color: "white" },
-          { title: "3", value: 20, color: "white" },
-          { title: "4", value: 20, color: "pink" },
+          { title: "", value: 100-props.percentage, color: "grey" },
+          { title: "Percentage of time spent", value: 1*props.percentage, color: "pink" },
         ]}
         className="stat__pie"
-      />
-      <img src={props.img} alt="" className="stat__logo" />
+      /> */}
+        <div className="stat__logo">
+          <img src={props.img} alt="" className={props.size} />
+        </div>
+      </div>
     </div>
   );
 }

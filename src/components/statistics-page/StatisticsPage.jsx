@@ -2,23 +2,82 @@ import { useState, useEffect } from "react";
 import Bookmark from "../bookmark/Bookmark";
 import Statistic from "./Statistic";
 import "./statisticsPage.css";
-import angularLogo from "../../assets/a.png";
+import angularLogo from "../../assets/angular.png";
 import cleanCodeLogo from "../../assets/clean.jpg";
-import javaLogo from "../../assets/java.png";
-import javascriptLogo from "../../assets/javascript.png";
-import reactLogo from "../../assets/react.png";
+import javaLogo from "../../assets/java.jpg";
+import javascriptLogo from "../../assets/js.jpg";
+import reactLogo from "../../assets/react.jpg";
 import secureLogo from "../../assets/secure.jpg";
-import materialLogo from "../../assets/material.png";
+import materialLogo from "../../assets/material.jpg";
+import testingLogo from "../../assets/testing.jpg";
 
 function StatisticsPage() {
-
-
   return (
-    <div className="statistics-page page">
-      <Bookmark text="Learnt"/>
-      <Statistic img={angularLogo}/>
-      <Statistic img={cleanCodeLogo}/>
-      <Statistic img={secureLogo}/>
+    <div className=" page">
+      {/* <Bookmark text="Learnt" /> */}
+      <div className="statistics-page">
+        <h2 className="stat-page__title">What did I focus on?</h2>
+        {/* <div className="statistics"> */}
+          <div className="large-statistics">
+            <Statistic
+              className="statistic large"
+              title="Angular"
+              img={angularLogo}
+              size="large"
+            />
+
+            <Statistic
+              className="statistic large"
+              title="React"
+              img={reactLogo}
+              size="large"
+            />
+            <Statistic
+              className="statistic large"
+              title="Java"
+              img={javaLogo}
+              size="large"
+            />
+            <Statistic
+              className="statistic large"
+              title="Vanilla JavaScript & CSS"
+              img={javascriptLogo}
+              size="large"
+            />
+          </div>
+
+          <div className="medium-statistics">
+            <Statistic
+              className="statistic medium"
+              title="Clean Code"
+              img={cleanCodeLogo}
+              size="medium"
+            />
+            <Statistic
+              className="statistic medium"
+              title="Testing"
+              img={testingLogo}
+              size="medium"
+            />
+          </div>
+
+          <div className="small-statistics">
+            <Statistic
+              className="statistic small"
+              title="Security"
+              img={secureLogo}
+              size="small"
+            />
+
+            <Statistic
+              className="statistic small"
+              title="Angular Material"
+              img={materialLogo}
+              size="small"
+            />
+          </div>
+        </div>
+      {/* </div> */}
     </div>
   );
 }
