@@ -4,6 +4,7 @@ import Statistic from "./Statistic";
 import "./statisticsPage.css";
 import angularLogo from "../../assets/angular.png";
 import cleanCodeLogo from "../../assets/clean.jpg";
+import typescriptLogo from "../../assets/ts.png";
 import javaLogo from "../../assets/java.jpg";
 import javascriptLogo from "../../assets/js.jpg";
 import reactLogo from "../../assets/react.jpg";
@@ -12,6 +13,9 @@ import materialLogo from "../../assets/material.jpg";
 import testingLogo from "../../assets/testing.jpg";
 
 function StatisticsPage() {
+  //Angular - React - CSS (Flex and Grid) - Java
+  //Clean Code - Testing - TypeScript
+  //Security - Angular Material
   return (
     <div className=" page">
       {/* <Bookmark text="Learnt" /> */}
@@ -40,7 +44,7 @@ function StatisticsPage() {
             />
             <Statistic
               className="statistic large"
-              title="Vanilla JavaScript & CSS"
+              title="CSS (Flex & Grid)"
               img={javascriptLogo}
               size="large"
             />
@@ -51,6 +55,12 @@ function StatisticsPage() {
               className="statistic medium"
               title="Clean Code"
               img={cleanCodeLogo}
+              size="medium"
+            />
+            <Statistic
+              className="statistic medium"
+              title="TypeScript"
+              img={typescriptLogo}
               size="medium"
             />
             <Statistic

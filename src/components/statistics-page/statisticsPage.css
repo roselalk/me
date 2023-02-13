@@ -33,7 +33,7 @@
 .medium-statistics {
     display: flex;
     flex-direction: row;
-    gap: 350px;
+    gap: 120px;
     align-items: flex-end;
     margin-bottom: 50px;
 }
@@ -41,8 +41,9 @@
 .small-statistics {
     display: flex;
     flex-direction: row;
-    gap: 100px;
+    gap: 170px;
     align-items: flex-end;
+    margin-left: 60px;
 }
 
 .stat {
