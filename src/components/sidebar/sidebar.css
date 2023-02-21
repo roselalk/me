@@ -3,6 +3,18 @@
     color: black
 }
 
+.languages {
+    display: flex;
+    flex-direction: row;
+    margin-top: auto;
+    padding: 5%;
+    gap: 20px;
+}
+
+.language-option:hover {
+    cursor: pointer;
+}
+
 .sidebar {
     display: flex;
     flex-direction: column;

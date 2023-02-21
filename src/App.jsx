@@ -1,6 +1,7 @@
 // import { useState } from "react";
 import "./App.css";
 import HomePage from "./components/home/HomePage";
+import { useState } from "react";
 import Sidebar from "./components/sidebar/Sidebar";
 import StatisticsPage from "./components/statistics-page/StatisticsPage";
 import AboutMe from "./components/about-me/AboutMe";
@@ -9,16 +10,23 @@ import Portfolio from "./components/portfolio/Portfolio";
 import Contact from "./components/contact/Contact";
 
 function App() {
-  // const [count, setCount] = useState(0);
+  const [language, setLanguage] = useState("English")
+
+  function changeLanguage(language) {
+    setLanguage(language)
+    console.log("Clicked")
+  }
+
+  console.log(language)
 
   return (
     <div className="app">
       <Router>
-        <Sidebar />
+        <Sidebar language={language} handleClick={changeLanguage}/>
         <Routes>
-          <Route path="/" element={<HomePage />}></Route>
-          <Route path="/about-me" element={<AboutMe />}></Route>
-          <Route path="/learned" element={<StatisticsPage />}></Route>
+          <Route path="/" element={<HomePage language={language}/>}></Route>
+          <Route path="/about-me" element={<AboutMe language={language}/>}></Route>
+          <Route path="/learned" element={<StatisticsPage language={language}/>}></Route>
           {/* <Route path="/portfolio" element={<Portfolio />}></Route>
           <Route path="/contact" element={<Contact />}></Route> */}
         </Routes>

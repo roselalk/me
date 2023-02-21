@@ -12,7 +12,7 @@ import secureLogo from "../../assets/secure.jpg";
 import materialLogo from "../../assets/material.jpg";
 import testingLogo from "../../assets/testing.jpg";
 
-function StatisticsPage() {
+function StatisticsPage(props) {
   //Angular - React - CSS (Flex and Grid) - Java
   //Clean Code - Testing - TypeScript
   //Security - Angular Material
@@ -20,7 +20,10 @@ function StatisticsPage() {
     <div className=" page">
       {/* <Bookmark text="Learnt" /> */}
       <div className="statistics-page">
-        <h2 className="stat-page__title">What did I focus on?</h2>
+        {props.language === "English" && <h2 className="stat-page__title">What did I focus on?</h2>}
+        {props.language === "Nederlands" && <h2 className="stat-page__title">Waar heb ik mijn aandacht aan besteed?</h2>}
+        {props.language === "Korean" && <h2 className="stat-page__title">내가 무엇에 집중하였는가?</h2>}
+        
         {/* <div className="statistics"> */}
           <div className="large-statistics">
             <Statistic
