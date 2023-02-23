@@ -7,6 +7,7 @@ import cleanCodeLogo from "../../assets/clean.jpg";
 import typescriptLogo from "../../assets/ts.png";
 import javaLogo from "../../assets/java.jpg";
 import javascriptLogo from "../../assets/js.jpg";
+import cssLogo from "../../assets/css.jpg";
 import reactLogo from "../../assets/react.jpg";
 import secureLogo from "../../assets/secure.jpg";
 import materialLogo from "../../assets/material.jpg";
@@ -48,7 +49,7 @@ function StatisticsPage(props) {
             <Statistic
               className="statistic large"
               title="CSS (Flex & Grid)"
-              img={javascriptLogo}
+              img={cssLogo}
               size="large"
             />
           </div>
