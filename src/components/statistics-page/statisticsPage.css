@@ -1,8 +1,88 @@
-/* .statistics-page {
+/* MOBILE */
+.statistics-page__title-div--mobile {
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.statistics-page__title--mobile {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 70px;
+    margin-top: 50px;
+}
+
+.statistics-page__grid--mobile {
     display: grid;
-    grid-auto-rows: 4;
-    padding: 100px;
-} */
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, auto);
+}
+
+.angular {
+    grid-column: 2/6;
+    grid-row: 1;
+}
+
+.react {
+    grid-column: 4/8;
+    grid-row: 2;
+}
+
+.java {
+    grid-column: 2/6;
+    grid-row: 3;
+}
+
+.css {
+    grid-column: 4/8;
+    grid-row: 4;
+}
+
+.clean {
+    grid-column: 2/6;
+    grid-row: 5;
+}
+
+.typescript {
+    grid-column: 5/8;
+    grid-row: 6;
+}
+
+.testing {
+    grid-column: 2/6;
+    grid-row: 7;
+}
+
+.security {
+    grid-column: 5/8;
+    grid-row: 8;
+}
+
+.material {
+    grid-column: 3/6;
+    grid-row: 9;
+}
+
+.large-font {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.medium-font {
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.small-font {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+
+
+
+
 .statistics-page {
     display: flex;
     flex-direction: column;
@@ -10,17 +90,7 @@
     padding: 100px;
 }
 
-/* .row-2 {
-    grid-row: 2;
-}
 
-.medium {
-    grid-row: 3;
-}
-
-.small {
-    grid-row: 4;
-} */
 
 .large-statistics {
     display: flex;

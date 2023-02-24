@@ -1,0 +1,30 @@
+.mobile-nav {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 40%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    width: 100vw;
+}
+
+.mobile-nav__hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.mobile-nav__hamburger-line {
+    width: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.22);
+    height: 0px;
+}
+
+.mobile-nav__picture {
+    height: 55px;
+    border-radius: 50%;
+    margin-left: 100%;
+}

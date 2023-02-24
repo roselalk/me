@@ -1,3 +1,36 @@
+/* MOBILE */
+.mobile-about-page {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.about-card--mobile {
+    width: 100%;
+}
+
+.about-card--back--mobile {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: repeat(7, 1fr);
+    aspect-ratio: 1/1;
+    justify-items: center;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.about-card__icon--mobile {
+    width: 75px;
+    grid-row: 3;
+    grid-column: 2;
+    align-self: center;
+}
+
+.about-card__title--mobile {
+    font-size: 1.2rem;
+}
+
 
 /* GENERAL */
 .about-card {

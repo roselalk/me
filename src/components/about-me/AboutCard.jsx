@@ -16,9 +16,35 @@ function AboutCard(props) {
 
   return (
     <div
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      className="about-card"
+      onMouseEnter={
+        props.mobile
+          ? () => {
+              return false;
+            }
+          : handleMouseEnter
+      }
+      onMouseLeave={
+        props.mobile
+          ? () => {
+              return false;
+            }
+          : handleMouseLeave
+      }
+      onTouchStart={
+        props.mobile
+          ? handleMouseEnter
+          : () => {
+              return false;
+            }
+      }
+      onTouchEnd={
+        props.mobile
+          ? handleMouseLeave
+          : () => {
+              return false;
+            }
+      }
+      className={props.mobile ? "about-card--mobile" : "about-card"}
     >
       {viewFront && (
         <div className="about-card--front">
@@ -30,26 +56,27 @@ function AboutCard(props) {
         </div>
       )}
       {!viewFront && (
-        <div className="about-card--back">
+        <div
+          className={
+            props.mobile ? "about-card--back--mobile" : "about-card--back"
+          }
+        >
           <img
-            className="about-card__icon"
+            className={
+              props.mobile ? "about-card__icon--mobile" : "about-card__icon"
+            }
             src={props.icon}
             alt="cute icon vaguely representing the hobby/characteristic the card represents"
           />
           <div className="about-card__text-div">
-            <h3 className="about-card__title">{props.title}</h3>
-            <p className="about-card__text">
-                {props.text}
-              {/* This is where a bit of info about me will go, specific to the
-              hobby/characteristic this card represents. This is where a bit of
-              info about me will go, specific to the hobby/characteristic this
-              card represents. This is where a bit of info about me will go,
-              specific to the hobby/characteristic this card represents. This is
-              where a bit of info about me will go, specific to the
-              hobby/characteristic this card represents. This is where a bit of
-              info about me will go, specific to the hobby/characteristic this
-              card represents. */}
-            </p>
+            <h3
+              className={
+                props.mobile ? "about-card__title--mobile" : "about-card__title"
+              }
+            >
+              {props.title}
+            </h3>
+            <p className="about-card__text">{props.text}</p>
           </div>
         </div>
       )}

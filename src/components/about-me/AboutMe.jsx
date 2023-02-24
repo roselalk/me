@@ -12,28 +12,13 @@ import icon3 from "../../assets/cheese.png";
 import icon4 from "../../assets/korean.png";
 
 function AboutMe(props) {
-  //   const [count, setCount] = useState(0)
-
-  //Should have card components, which have a photo on one side and a bit of information on the other.
-  //The goal is ultimately to have them animated so they flip like a real card when you hover over them.
-
-  //Cards:
-  //Travel: cheongsapo?
-
-  //Background: me in forest?
-  //Food: something I made myself? Something I ate and loved?
-  //Korean: photo with classmates and certificates?
 
   const dataArray = data;
 
   console.log(dataArray);
-  // console.log(`"../../assets/${dataArray.data[0].img}"`);
-
-  //put data in bestand. pull in data from bestand and put in in array. refer to array using
-  //array[0].title
 
   return (
-    <div className="page about-page">
+    <div className={props.mobile ? "page--mobile mobile-about-page" : "page about-page"}>
       {props.language === "English" && (
         <>
           {" "}
@@ -43,6 +28,7 @@ function AboutMe(props) {
             img={pic1}
             icon={icon1}
             className=""
+            mobile={props.mobile}
           />
           <AboutCard
             title={dataArray.english[1].title}
@@ -50,6 +36,7 @@ function AboutMe(props) {
             img={pic2}
             icon={icon2}
             className=""
+            mobile={props.mobile}
           />
           <AboutCard
             title={dataArray.english[2].title}
@@ -57,6 +44,7 @@ function AboutMe(props) {
             img={pic3}
             icon={icon3}
             className=""
+            mobile={props.mobile}
           />
           <AboutCard
             title={dataArray.english[3].title}
@@ -64,6 +52,7 @@ function AboutMe(props) {
             img={pic4}
             icon={icon4}
             className=""
+            mobile={props.mobile}
           />
         </>
       )}
@@ -76,6 +65,7 @@ function AboutMe(props) {
             img={pic1}
             icon={icon1}
             className=""
+            mobile={props.mobile}
           />
           <AboutCard
             title={dataArray.nederlands[1].title}
@@ -83,6 +73,7 @@ function AboutMe(props) {
             img={pic2}
             icon={icon2}
             className=""
+            mobile={props.mobile}
           />
           <AboutCard
             title={dataArray.nederlands[2].title}
@@ -90,6 +81,7 @@ function AboutMe(props) {
             img={pic3}
             icon={icon3}
             className=""
+            mobile={props.mobile}
           />
           <AboutCard
             title={dataArray.nederlands[3].title}
@@ -97,6 +89,7 @@ function AboutMe(props) {
             img={pic4}
             icon={icon4}
             className=""
+            mobile={props.mobile}
           />
         </>
       )}
@@ -109,6 +102,7 @@ function AboutMe(props) {
             img={pic1}
             icon={icon1}
             className=""
+            mobile={props.mobile}
           />
           <AboutCard
             title={dataArray.korean[1].title}
@@ -116,6 +110,7 @@ function AboutMe(props) {
             img={pic2}
             icon={icon2}
             className=""
+            mobile={props.mobile}
           />
           <AboutCard
             title={dataArray.korean[2].title}
@@ -123,6 +118,7 @@ function AboutMe(props) {
             img={pic3}
             icon={icon3}
             className=""
+            mobile={props.mobile}
           />
           <AboutCard
             title={dataArray.korean[3].title}
@@ -130,6 +126,7 @@ function AboutMe(props) {
             img={pic4}
             icon={icon4}
             className=""
+            mobile={props.mobile}
           />
         </>
       )}

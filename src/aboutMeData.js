@@ -20,11 +20,11 @@ export default {
   nederlands: [
     {
       title: "Reizen",
-      text: "Al zolang ik me kan herinneren gaat er voor mij niets boven reizen. Ik heb het geluk gehad in mijn jonge leven al veel te reizen, aangezien mijn moeder stewardess was en wij dan soms mee konden. Er zijn nog veel mooie reizen die ik wil maken, maar mijn meest bijzondere reizen tot zover waren de tijd die ik in Texas heb doorgebracht als uitwisselingsstudent op een echte American high school, en de tijd die ik als uitwisselingsstudent aan een universiteit in Korea heb doorgebracht.",
+      text: "Al zolang ik me kan herinneren gaat er voor mij niets boven reizen. Mijn meest bijzondere reizen tot zover waren de tijd die ik in Texas heb doorgebracht als uitwisselingsstudent op een American high school, en de tijd die ik als uitwisselingsstudent aan een universiteit in Korea heb doorgebracht.",
     },
     {
       title: "Neuropsychologie",
-      text: "Ik heb aan de Universiteit Utrecht mijn BSc in Neuropsychologie gehaald. Ik vind hiermee veel mooie raakvlakken met mijn werk als programmeur: door mijn interesse in en kennis over de hersenen houd ik me graag bezig met UX, waardoor ik als developer niet vast kom te zitten in enkel de mooiste code te willen schrijven, maar ook daadwerkelijk nadenk over wat voor de eindgebruiker het beste product is.",
+      text: "Ik heb aan de Universiteit Utrecht mijn BSc in Neuropsychologie gehaald. Ik vind hiermee mooie raakvlakken met mijn werk als programmeur. Zo houd ik me door mijn interesse in en kennis over de hersenen graag bezig met UX. Hierdoor besteed ik veel aandacht aan nadenken over wat voor de eindgebruiker het beste product is.",
     },
     {
       title: "Lekker eten",
