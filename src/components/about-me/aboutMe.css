@@ -12,7 +12,6 @@
     align-items: center;
     display: grid;
     grid-template-columns: 15% 70% 15%;
-
     aspect-ratio: 1/1;
     justify-items: center;
     text-align: center;
@@ -24,6 +23,7 @@
     grid-row: 3;
     grid-column: 2;
     align-self: center;
+    margin-top: 20px;
 }
 
 .about-card__title--mobile {
