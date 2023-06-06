@@ -1,23 +1,20 @@
-import { useState, useEffect, useRef } from "react";
-import Bookmark from "../bookmark/Bookmark";
 import Statistic from "./Statistic";
 import "./statisticsPage.css";
 import angularLogo from "../../assets/angular.png";
 import cleanCodeLogo from "../../assets/clean.jpg";
 import typescriptLogo from "../../assets/ts.png";
 import javaLogo from "../../assets/java.jpg";
-import javascriptLogo from "../../assets/js.jpg";
 import cssLogo from "../../assets/css.jpg";
 import reactLogo from "../../assets/react.jpg";
 import secureLogo from "../../assets/secure.jpg";
 import materialLogo from "../../assets/material.jpg";
 import testingLogo from "../../assets/testing.jpg";
-import MyPieChart from "../charts/PieChart";
-import { LineChart } from "recharts";
-import MyLineChart from "../charts/LineChart";
 import SmallStat from './SmallStat';
 import MedStat from "./MedStat";
 import LargeStat from "./LargeStat";
+import MobileContext from "../../context/mobile";
+import LanguageContext from "../../context/language";
+import { useContext } from "react";
 
 
 
@@ -25,20 +22,24 @@ function StatisticsPage(props) {
   //Want to do:
   //- Refactoring: create largeStat, medStat and smallStat so size does not have to be a prop anymore for every single element
 
+  const { mobile } = useContext(MobileContext)
+  const { language } = useContext(LanguageContext)
+
+
   return (
     <div className={props.mobile ? "page--mobile" : " page"} >
-      {props.mobile ? (
+      {mobile ? (
         <div className="statistics-page--mobile" >
           <div className="statistics-page__title-div--mobile" >
-            {props.language === "English" && (
+            {language === "English" && (
               <h2 className="statistics-page__title--mobile">What are my skills?</h2>
             )}
-            {props.language === "Nederlands" && (
+            {language === "Nederlands" && (
               <h2 className="statistics-page__title--mobile">
                 Wat zijn mijn skills?
               </h2>
             )}
-            {props.language === "Korean" && (
+            {language === "Korean" && (
               <h2 className="statistics-page__title--mobile">내가 무엇에 집중하였는가?</h2>
             )}
           </div>
@@ -109,15 +110,15 @@ function StatisticsPage(props) {
         </div>
       ) : (
         <div className="statistics-page" >
-          {props.language === "English" && (
+          {language === "English" && (
             <h2 className="stat-page__title">What are my skills?</h2>
           )}
-          {props.language === "Nederlands" && (
+          {language === "Nederlands" && (
             <h2 className="stat-page__title">
               Wat zijn mijn skills?
             </h2>
           )}
-          {props.language === "Korean" && (
+          {language === "Korean" && (
             <h2 className="stat-page__title">내가 무엇에 집중하였는가?</h2>
           )}
 

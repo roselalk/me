@@ -1,13 +1,13 @@
-import { useState } from 'react'
 import profilePicture from '../../assets/me.png'
 import './mobile-menu.css'
 
-function MobileProfileCard(props) {
+function MobileProfileCard() {
 //   const [count, setCount] = useState(0)
+const { language } = useContext(LanguageContext)
 
 let korean = false;
 
-if (props.language === "Korean") {
+if (language === "Korean") {
   korean = true;
 }
 

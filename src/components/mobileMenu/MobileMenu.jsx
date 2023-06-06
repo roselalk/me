@@ -1,9 +1,11 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "./mobile-menu.css";
 import MobileProfileCard from "./MobileProfileCard";
 import { Link } from "react-router-dom";
 
 function MobileMenu(props) {
+    const { language, setLanguage } = useContext(LanguageContext)
+
   //gebruik van UseEffect(), omdat anders setState elke keer wordt uitgevoerd dat de component gerendered wordt, en dat geeft de error
   //Warning: Cannot update a component (`App`) while rendering a different component (`MobileMenu`). To locate the bad setState() call
   //inside `MobileMenu`
@@ -20,42 +22,42 @@ function MobileMenu(props) {
         </div>
       </Link>
 
-      <MobileProfileCard language={props.language} />
+      <MobileProfileCard />
       <div className="mobile-menu-items">
         <Link to="/" className="menu-item menu-item__title" onClick={() => props.showNav(true)}>
-          {props.language === "English" && <p>Home</p>}
-          {props.language === "Nederlands" && <p>Home</p>}
-          {props.language === "Korean" && <p>홈</p>}
+          {language === "English" && <p>Home</p>}
+          {language === "Nederlands" && <p>Home</p>}
+          {language === "Korean" && <p>홈</p>}
         </Link>
         <Link className="menu-item menu-item__title" to="/about-me" onClick={() => props.showNav(true)}>
-          {props.language === "English" && <p>About me</p>}
-          {props.language === "Nederlands" && <p>Wie ben ik?</p>}
-          {props.language === "Korean" && <p>나에 대해서</p>}
+          {language === "English" && <p>About me</p>}
+          {language === "Nederlands" && <p>Wie ben ik?</p>}
+          {language === "Korean" && <p>나에 대해서</p>}
         </Link>
         <Link className="menu-item menu-item__title" to="/learned" onClick={() => props.showNav(true)}>
-          {props.language === "English" && <p>What did I learn?</p>}
-          {props.language === "Nederlands" && <p>Wat heb ik geleerd?</p>}
-          {props.language === "Korean" && <p>내가 배운 것에 대해서</p>}
+          {language === "English" && <p>What did I learn?</p>}
+          {language === "Nederlands" && <p>Wat heb ik geleerd?</p>}
+          {language === "Korean" && <p>내가 배운 것에 대해서</p>}
         </Link>
       </div>
       <div className="mobile-languages">
         <p
           className="language-option"
-          onClick={() => props.handleClick("Nederlands")}
+          onClick={() => setLanguage("Nederlands")}
         >
           Nederlands
         </p>
         <p>|</p>
         <p
           className="language-option"
-          onClick={() => props.handleClick("English")}
+          onClick={() => setLanguage("English")}
         >
           English
         </p>
         <p>|</p>
         <p
           className="language-option"
-          onClick={() => props.handleClick("Korean")}
+          onClick={() => setLanguage("Korean")}
         >
           한국어
         </p>

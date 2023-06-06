@@ -1,13 +1,15 @@
-import { useState } from 'react'
 import profilePicture from '../../assets/me.png'
 import './sidebar.css'
+import LanguageContext from "../../context/language";
+import { useContext } from "react";
 
-function ProfileCard(props) {
-//   const [count, setCount] = useState(0)
+
+function ProfileCard() {
+const { language } = useContext(LanguageContext)
 
 let korean = false;
 
-if (props.language === "Korean") {
+if (language === "Korean") {
   korean = true;
 }
 

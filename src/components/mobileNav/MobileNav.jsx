@@ -3,7 +3,7 @@ import me from "../../assets/me.png";
 import "./mobile-nav.css";
 import { Link } from "react-router-dom";
 
-function MobileNav(props) {
+function MobileNav() {
   return (
     <div className="mobile-nav">
       <Link to="/">

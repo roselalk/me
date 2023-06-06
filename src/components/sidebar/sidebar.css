@@ -63,3 +63,7 @@
     margin: 0;
 }
 
+.menu-item_active {
+    color: var(--lightgreyblue);
+}
+

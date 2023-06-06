@@ -1,38 +1,45 @@
+import { useContext } from "react";
 import ProfileCard from "./ProfileCard";
 import "./sidebar.css";
 import { Link } from "react-router-dom";
+import LanguageContext from "../../context/language";
+import { useLocation } from 'react-router-dom';
 
-function Sidebar(props) {
-  //   const [count, setCount] = useState(0)
+function Sidebar() {
+  const { language, setLanguage } = useContext(LanguageContext)
+  const {pathname} = useLocation();
+
 
   return (
     <div className="sidebar">
-      <ProfileCard language={props.language} />
+      <ProfileCard />
+
       <div className="menu-items">
-        <Link to="/" className="menu-item menu-item__title">
-          {props.language === "English" && <p>Home</p>}
-          {props.language === "Nederlands" && <p>Home</p>}
-          {props.language === "Korean" && <p>홈</p>}
+        <Link to="/" className={`menu-item_${(pathname === '/') ? 'active' : ''} menu-item__title`}>
+          {language === "Nederlands" && <p>Home</p>}
+          {language === "Korean" && <p>홈</p>}
+          {language === "English" && <p>Home</p>}
         </Link>
-        <Link className="menu-item menu-item__title" to="/about-me">
-          {props.language === "English" && <p>About me</p>}
-          {props.language === "Nederlands" && <p>Wie ben ik?</p>}
-          {props.language === "Korean" && <p>나에 대해서</p>}
+
+        <Link className={`menu-item_${(pathname === '/about-me') ? 'active' : ''} menu-item__title`} to="/about-me">
+          {language === "English" && <p>About me</p>}
+          {language === "Nederlands" && <p>Wie ben ik?</p>}
+          {language === "Korean" && <p>나에 대해서</p>}
         </Link>
-        <Link className="menu-item menu-item__title" to="/learned">
-          {props.language === "English" && <p>What did I learn?</p>}
-          {props.language === "Nederlands" && <p>Wat heb ik geleerd?</p>}
-          {props.language === "Korean" && <p>내가 배운 것에 대해서</p>}
+
+        <Link className={`menu-item_${(pathname === '/learned') ? 'active' : ''} menu-item__title`} to="/learned">
+          {language === "English" && <p>What did I learn?</p>}
+          {language === "Nederlands" && <p>Wat heb ik geleerd?</p>}
+          {language === "Korean" && <p>내가 배운 것에 대해서</p>}
         </Link>
-        {/* <Link className="menu-item menu-item__title" to="/portfolio">Portfolio</Link>
-        <Link className="menu-item menu-item__title" to="/contact">Contact</Link> */}
       </div>
+
       <div className="languages">
-        <p className="language-option" onClick={() => props.handleClick("Nederlands")}>Nederlands</p>
+        <p className="language-option" onClick={() => setLanguage("Nederlands")}>Nederlands</p>
         <p>|</p>
-        <p className="language-option" onClick={() => props.handleClick("English")}>English</p>
+        <p className="language-option" onClick={() => setLanguage("English")}>English</p>
         <p>|</p>
-        <p className="language-option" onClick={() => props.handleClick("Korean")}>한국어</p>
+        <p className="language-option" onClick={() => setLanguage("Korean")}>한국어</p>
       </div>
     </div>
   );

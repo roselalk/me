@@ -1,50 +1,51 @@
-import { useState, useEffect } from "react";
+import { useState, useContext } from "react";
 import "./aboutMe.css";
+import MobileContext from "../../context/mobile";
 
 function AboutCard(props) {
   const [viewFront, setViewFront] = useState(true);
+  const { mobile } = useContext(MobileContext)
+
 
   function handleMouseEnter() {
-    console.log("Card flipped");
     setViewFront(false);
   }
 
   function handleMouseLeave() {
-    console.log("Card flipped");
     setViewFront(true);
   }
 
   return (
     <div
       onMouseEnter={
-        props.mobile
+        mobile
           ? () => {
               return false;
             }
           : handleMouseEnter
       }
       onMouseLeave={
-        props.mobile
+        mobile
           ? () => {
               return false;
             }
           : handleMouseLeave
       }
       onTouchStart={
-        props.mobile
+        mobile
           ? handleMouseEnter
           : () => {
               return false;
             }
       }
       onTouchEnd={
-        props.mobile
+        mobile
           ? handleMouseLeave
           : () => {
               return false;
             }
       }
-      className={props.mobile ? "about-card--mobile" : "about-card"}
+      className={mobile ? "about-card--mobile" : "about-card"}
     >
       {viewFront && (
         <div className="about-card--front">
@@ -58,12 +59,12 @@ function AboutCard(props) {
       {!viewFront && (
         <div
           className={
-            props.mobile ? "about-card--back--mobile" : "about-card--back"
+            mobile ? "about-card--back--mobile" : "about-card--back"
           }
         >
           <img
             className={
-              props.mobile ? "about-card__icon--mobile" : "about-card__icon"
+              mobile ? "about-card__icon--mobile" : "about-card__icon"
             }
             src={props.icon}
             alt="cute icon vaguely representing the hobby/characteristic the card represents"
@@ -71,7 +72,7 @@ function AboutCard(props) {
           <div className="about-card__text-div">
             <h3
               className={
-                props.mobile ? "about-card__title--mobile" : "about-card__title"
+                mobile ? "about-card__title--mobile" : "about-card__title"
               }
             >
               {props.title}
