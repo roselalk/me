@@ -1,0 +1,14 @@
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 50%;
+    background-color: pink;
+    aspect-ratio: 1/1;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-card--image {
+    height: 100%;
+    border-radius: 50%;
+}

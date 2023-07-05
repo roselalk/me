@@ -1,0 +1,53 @@
+.portrait-div {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    /* border: 2px solid pink; */
+    width: calc(100vw -30%);
+    height: 70vh;
+    margin: 150px;
+    overflow: hidden;
+}
+
+.arrow-button {
+    height: 80px;
+    aspect-ratio: 1/1;
+    background-color: rgb(235, 234, 234);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-button:hover {
+    cursor: pointer;
+}
+
+.arrow-button img {
+    height: 50px;
+}
+
+.prev-arrow {
+    rotate: 180deg;
+}
+
+.prev-button {
+    grid-column: 1;
+}
+
+.portrait--skill-card {
+    grid-column: 2;
+    height: 100%;
+    margin: 24px;
+}
+
+.next-button {
+    grid-column: 3;
+}
+
+.wide-div {
+    display: flex;
+    flex-direction: row;
+}

@@ -10,6 +10,7 @@ import MobileNav from "./components/mobileNav/MobileNav";
 import MobileMenu from "./components/mobileMenu/MobileMenu";
 import { useLocation } from "react-router-dom";
 import MobileContext from "./context/mobile";
+import SkillPage from "./components/SkillPage";
 
 function App() {
   const [mobileNavVisible, setMobileNavVisible] = useState(true);
@@ -36,7 +37,7 @@ function App() {
           ></Route>
           <Route
             path="/learned"
-            element={<StatisticsPage />}
+            element={<SkillPage />}
           ></Route>
           <Route
             path="/menu"
